@@ -1,10 +1,15 @@
 ﻿@page "/weather"
+@inject PreRenderAppState AppState
 
 <PageTitle>Weather</PageTitle>
 
 <h1>Weather</h1>
 
 <p>This component demonstrates showing data.</p>
+
+<div class="bg-dark text-white m-3 p-2">
+    <pre>IPAddress: @(AppState.RemoteIPAddress.ToString())</pre>
+</div>
 
 @if (forecasts == null)
 {
